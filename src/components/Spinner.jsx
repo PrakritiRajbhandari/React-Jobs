@@ -5,15 +5,14 @@ const override = {
   margin: '100px auto',
 };
 
-function Spinner() {
+const Spinner = ({ loading }) => {
   return (
-        <ClipLoader
-          color='#4338ca'
-          
-          size={150}
-        />
-      
-  )
-}
-
-export default Spinner
+    <ClipLoader
+      color='#4338ca'
+      loading={loading}
+      cssOverride={override}
+      size={150}
+    />
+  );
+};
+export default Spinner;
